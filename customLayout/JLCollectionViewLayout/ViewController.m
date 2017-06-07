@@ -45,11 +45,13 @@ static NSString *const footer = @"footer";
         UICollectionReusableView *reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:header forIndexPath:indexPath];
         [reusableView addSubview:[self contantHeaderView]];
         return reusableView;
-    }else{
-        UICollectionReusableView *reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footer forIndexPath:indexPath];
-        [reusableView addSubview:[self contantFooterView]];
-        return reusableView;
     }
+//    else{
+//        UICollectionReusableView *reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footer forIndexPath:indexPath];
+//        [reusableView addSubview:[self contantFooterView]];
+//        return reusableView;
+//    }
+    return nil;
 }
 
 - (UIView *)contantHeaderView{
@@ -75,9 +77,9 @@ static NSString *const footer = @"footer";
 - (CGSize)collectionViewLayout:(JLCollectionViewLayout *)layout sectionHeaderAtIndexPath:(NSIndexPath *)indexPath{
     return CGSizeMake(self.view.frame.size.width, 200);
 }
-- (CGSize)collectionViewLayout:(JLCollectionViewLayout *)layout sectionFooterAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(self.view.frame.size.width, 100);
-}
+//- (CGSize)collectionViewLayout:(JLCollectionViewLayout *)layout sectionFooterAtIndexPath:(NSIndexPath *)indexPath{
+//    return CGSizeMake(self.view.frame.size.width, 100);
+//}
 
 
 #pragma mark --- 懒加载
@@ -100,7 +102,7 @@ static NSString *const footer = @"footer";
         
         [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([JLCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:cellID];
         [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:header];
-        [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footer];
+//        [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footer];
     }
     return _collectionView;
 }

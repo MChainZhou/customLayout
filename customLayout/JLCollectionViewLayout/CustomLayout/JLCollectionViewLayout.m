@@ -55,9 +55,14 @@
             UICollectionViewLayoutAttributes *itemAttri = [self layoutAttributesForItemAtIndexPath:[NSIndexPath indexPathForRow:j inSection:i]];
             [self.attrArr addObject:itemAttri];
         }
-        //4.计算section footer的属性
-        UICollectionViewLayoutAttributes *footerAttr = [self layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionFooter atIndexPath:[NSIndexPath indexPathForRow:0 inSection:i]];
-        [self.attrArr addObject:footerAttr];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:i];
+        CGFloat footerH = [self footerSizeAtIndexPath:indexPath].height;
+        if (footerH > 0) {
+            //4.计算section footer的属性
+            UICollectionViewLayoutAttributes *footerAttr = [self layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionFooter atIndexPath:indexPath];
+            [self.attrArr addObject:footerAttr];
+        }
+        
     }
     
 }
