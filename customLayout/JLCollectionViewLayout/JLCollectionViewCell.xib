@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="JLCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUK-4Y-ISI">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="gUK-4Y-ISI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="KL1-tY-hF5"/>
+                <constraint firstItem="gUK-4Y-ISI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="XHp-R9-uhs"/>
+                <constraint firstAttribute="trailing" secondItem="gUK-4Y-ISI" secondAttribute="trailing" id="aOg-IJ-Yeh"/>
+                <constraint firstAttribute="bottom" secondItem="gUK-4Y-ISI" secondAttribute="bottom" id="z75-6c-MLK"/>
+            </constraints>
+            <connections>
+                <outlet property="bgView" destination="gUK-4Y-ISI" id="cnf-lI-nuX"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
